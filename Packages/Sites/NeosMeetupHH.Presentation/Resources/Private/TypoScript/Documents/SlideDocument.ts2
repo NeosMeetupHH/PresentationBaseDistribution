@@ -1,4 +1,8 @@
 prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
+    @context {
+        presentation = ${q(documentNode).closest('[instanceof NeosMeetupHH.Presentation:PresentationMixin]').get(0)}
+        theme = ${q(presentation).property('presentation__theme')}
+    }
     //
     // Redirect to closest presentation, when hit directly
     //
@@ -8,7 +12,7 @@ prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Pres
 
         headers = TYPO3.TypoScript:RawArray {
             Location = TYPO3.Neos:NodeUri {
-                node = ${q(documentNode).closest('[instanceof NeosMeetupHH.Presentation:PresentationMixin]').get(0)}
+                node = ${presentation}
             }
 
             @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}

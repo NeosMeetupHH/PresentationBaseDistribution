@@ -4,6 +4,12 @@
   ui:
     group: 'presentations'
     icon:  icon-laptop
+    inspector:
+      groups:
+        presentation:
+          label: 'Presentation Settings'
+          position: -10
+
 
   constraints:
     nodeTypes:
@@ -13,3 +19,25 @@
       'NeosMeetupHH.Presentation:HomePage': FALSE
       'NeosMeetupHH.Presentation:PresentationMixin': FALSE
       'NeosMeetupHH.Presentation:SlideMixin': TRUE
+
+  properties:
+
+    title:
+      ui:
+        position: 0
+        inspector:
+          group: presentation
+
+    presentation__theme:
+      type: string
+      defaultValue: 'default'
+      ui:
+        label: 'Theme'
+        position: 100
+        inspector:
+          group: presentation
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              default:
+                label: 'Default'
