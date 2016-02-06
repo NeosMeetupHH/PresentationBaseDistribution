@@ -23,3 +23,6 @@ Build/Resources/Java/selenium-server-standalone*
 
 Readme.rst
 Upgrading.rst
+
+Packages/Sites/NeosMeetupHH.Presentation/Resources/Public/Styles/*.css
+node_modules

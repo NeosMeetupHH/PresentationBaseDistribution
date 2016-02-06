@@ -1,0 +1,5 @@
+prototype(NeosMeetupHH.Presentation:PresentationDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
+    body {
+        welcome = '<h1>Hello, Klaus!</h1>'
+    }
+}

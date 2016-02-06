@@ -1,0 +1,17 @@
+{
+  "name": "NeosMeetupHH.Presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "./node_modules/.bin/node-sass --output-style compressed Resources/Private/Sass/Main.scss Resources/Public/Styles/Main.css",
+    "build": "npm run build-sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.4.2"
+  }
+}
