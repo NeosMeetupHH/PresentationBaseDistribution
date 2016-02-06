@@ -14,7 +14,8 @@
         "typo3/imagine": "@dev",
         "typo3/twitter-bootstrap": "@dev",
         "typo3/form": "@dev",
-        "typo3/setup": "@dev"
+        "typo3/setup": "@dev",
+        "michelf/php-markdown": "^1.6"
     },
     "require-dev": {
         "typo3/buildessentials": "3.1.x-dev",

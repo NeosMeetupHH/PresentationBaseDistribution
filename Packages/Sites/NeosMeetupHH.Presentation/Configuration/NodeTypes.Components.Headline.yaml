@@ -1,4 +1,5 @@
 'NeosMeetupHH.Presentation:Headline':
+  label: '${String.crop(q(node).property("headline__title"), 100)}'
   ui:
     label: 'Headline'
     icon: icon-font

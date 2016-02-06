@@ -1,0 +1,5 @@
+prototype(NeosMeetupHH.Presentation:Markdown) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://NeosMeetupHH.Presentation/Private/Fluid/Components/Markdown/Index.html'
+    markdown = ${q(node).property('markdown__content')}
+    theme = ${theme}
+}

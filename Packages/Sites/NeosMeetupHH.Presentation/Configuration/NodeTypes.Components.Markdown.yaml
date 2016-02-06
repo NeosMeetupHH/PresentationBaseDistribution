@@ -1,0 +1,31 @@
+'NeosMeetupHH.Presentation:Markdown':
+  label: '${String.crop(q(node).property("markdown__content"), 100)}'
+
+  ui:
+    label: 'Markdown'
+    icon: icon-font
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        markdown:
+          label: 'Markdown Settings'
+          position: -10
+
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+    'NeosMeetupHH.Presentation:SlideContentMixin': TRUE
+
+  properties:
+
+    markdown__content:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Type'
+        position: 0
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: markdown
+          editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
+          editorOptions:
+            highlightingMode: 'markdown'
