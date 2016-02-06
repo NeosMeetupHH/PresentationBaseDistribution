@@ -1,4 +1,20 @@
 prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
+    //
+    // Redirect to closest presentation, when hit directly
+    //
+    httpResponseHead {
+        statusCode = 301
+        statusCode.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+
+        headers = TYPO3.TypoScript:RawArray {
+            Location = TYPO3.Neos:NodeUri {
+                node = ${q(documentNode).closest('[instanceof NeosMeetupHH.Presentation:PresentationMixin]').get(0)}
+            }
+
+            @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+        }
+    }
+
     body {
         //
         // Render the slide as a component
