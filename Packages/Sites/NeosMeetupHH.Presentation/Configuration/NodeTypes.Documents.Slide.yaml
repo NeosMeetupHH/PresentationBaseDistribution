@@ -1,0 +1,7 @@
+'NeosMeetupHH.Presentation:Slide':
+  ui:
+    label: 'Blank Slide'
+
+  superTypes:
+    'TYPO3.Neos:Document': TRUE
+    'NeosMeetupHH.Presentation:SlideMixin': TRUE

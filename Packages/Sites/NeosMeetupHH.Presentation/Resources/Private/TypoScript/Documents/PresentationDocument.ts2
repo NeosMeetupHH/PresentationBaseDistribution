@@ -1,5 +1,23 @@
 prototype(NeosMeetupHH.Presentation:PresentationDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
     body {
-        welcome = '<h1>Hello, Klaus!</h1>'
+        //
+        // If in backend, render the presentation title at a prominent place
+        //
+        presentationTitle = TYPO3.TypoScript:Tag {
+            tagName = 'h1'
+            attributes.class = 'presentationTitle'
+
+            content = ${q(documentNode).property('title')}
+
+            @if.onlyRenderIfInBackend = ${documentNode.context.inBackend}
+        }
+
+        //
+        // At the frontend side, render all slides
+        //
+        slides = TYPO3.TypoScript:Collection {
+
+            @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+        }
     }
 }

@@ -2,6 +2,9 @@ TYPO3:
   Neos:
     nodeTypes:
       groups:
-        presentations:
+        slides:
           position: 100
+          label: 'Slides'
+        presentations:
+          position: 200
           label: 'Presentations'

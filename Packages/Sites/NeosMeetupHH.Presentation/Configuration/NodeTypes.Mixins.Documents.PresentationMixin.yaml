@@ -4,3 +4,12 @@
   ui:
     group: 'presentations'
     icon:  icon-laptop
+
+  constraints:
+    nodeTypes:
+      '*': FALSE
+      'TYPO3.Neos.NodeTypes:Page': FALSE
+      'TYPO3.Neos:Shortcut': FALSE
+      'NeosMeetupHH.Presentation:HomePage': FALSE
+      'NeosMeetupHH.Presentation:PresentationMixin': FALSE
+      'NeosMeetupHH.Presentation:SlideMixin': TRUE

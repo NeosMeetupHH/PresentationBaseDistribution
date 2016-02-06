@@ -1,0 +1,6 @@
+'NeosMeetupHH.Presentation:SlideMixin':
+  abstract: TRUE
+
+  ui:
+    group: 'slides'
+    icon:  icon-picture
