@@ -18,7 +18,8 @@
       'TYPO3.Neos:Shortcut': FALSE
       'NeosMeetupHH.Presentation:HomePage': FALSE
       'NeosMeetupHH.Presentation:PresentationMixin': FALSE
-      'NeosMeetupHH.Presentation:SlideMixin': TRUE
+      'NeosMeetupHH.Presentation:SubSlideMixin': FALSE
+      'NeosMeetupHH.Presentation:TopLevelSlideMixin': TRUE
 
   properties:
 

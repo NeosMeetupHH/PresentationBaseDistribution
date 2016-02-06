@@ -4,3 +4,21 @@
   ui:
     group: 'slides'
     icon:  icon-picture
+
+  constraints:
+    nodeTypes:
+      '*': FALSE
+      'TYPO3.Neos.NodeTypes:Page': FALSE
+      'TYPO3.Neos:Shortcut': FALSE
+      'NeosMeetupHH.Presentation:HomePage': FALSE
+      'NeosMeetupHH.Presentation:PresentationMixin': FALSE
+
+'NeosMeetupHH.Presentation:TopLevelSlideMixin':
+  abstract: TRUE
+  constraints:
+    nodeTypes:
+      'NeosMeetupHH.Presentation:TopLevelSlideMixin': FALSE
+      'NeosMeetupHH.Presentation:SubSlideMixin': TRUE
+
+'NeosMeetupHH.Presentation:SubSlideMixin':
+  abstract: TRUE

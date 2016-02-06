@@ -1,7 +1,21 @@
-'NeosMeetupHH.Presentation:Slide':
+'NeosMeetupHH.Presentation:SlideAbstract':
+  abstract: true
   ui:
     label: 'Blank Slide'
 
   superTypes:
     'TYPO3.Neos:Document': TRUE
     'NeosMeetupHH.Presentation:SlideMixin': TRUE
+
+'NeosMeetupHH.Presentation:Slide':
+
+  superTypes:
+    'NeosMeetupHH.Presentation:SlideAbstract': TRUE
+    'NeosMeetupHH.Presentation:TopLevelSlideMixin': TRUE
+
+
+'NeosMeetupHH.Presentation:SubSlide':
+
+  superTypes:
+    'NeosMeetupHH.Presentation:SlideAbstract': TRUE
+    'NeosMeetupHH.Presentation:SubSlideMixin': TRUE
