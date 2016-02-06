@@ -1,0 +1,40 @@
+prototype(NeosMeetupHH.Presentation:AbstractPageDocument) < prototype(TYPO3.Neos:Page) {
+    head {
+        stylesheets.site = TYPO3.TypoScript:RawArray {
+            @process.convertToLinkTags = TYPO3.TypoScript:Collection {
+                collection = ${value}
+                itemName = 'stylesheetUri'
+                itemRenderer = TYPO3.TypoScript:Tag {
+                    tagName = 'link'
+                    attributes {
+                        href = TYPO3.TypoScript:ResourceUri {
+                            path = ${stylesheetUri}
+                        }
+
+                        rel = 'stylesheet'
+                    }
+                }
+            }
+        }
+
+        javascripts.site = TYPO3.TypoScript:RawArray {
+            @process.convertToLinkTags = TYPO3.TypoScript:Collection {
+                collection = ${value}
+                itemName = 'scriptUri'
+                itemRenderer = TYPO3.TypoScript:Tag {
+                    tagName = 'script'
+                    attributes {
+                        src = TYPO3.TypoScript:ResourceUri {
+                            path = ${scriptUri}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    body >
+    body.node >
+    body.site >
+    body = TYPO3.TypoScript:Array
+}

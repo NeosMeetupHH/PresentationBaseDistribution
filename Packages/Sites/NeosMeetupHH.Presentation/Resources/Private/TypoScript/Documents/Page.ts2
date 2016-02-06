@@ -1,0 +1,11 @@
+prototype(NeosMeetupHH.Presentation:PageDocument) < prototype(NeosMeetupHH.Presentation:AbstractPageDocument) {
+    head {
+        stylesheets.site {
+            main = 'resource://NeosMeetupHH.Presentation/Public/Styles/Main.css'
+        }
+
+        javascripts.site = TYPO3.TypoScript:RawArray {
+            main = 'resource://NeosMeetupHH.Presentation/Public/JavaScript/App.js'
+        }
+    }
+}
