@@ -1,0 +1,4 @@
+'NeosMeetupHH.Presentation:Presentation':
+  superTypes:
+    'TYPO3.Neos:Document': TRUE
+    'NeosMeetupHH.Presentation:PresentationMixin': TRUE
