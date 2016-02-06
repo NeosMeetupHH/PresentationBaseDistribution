@@ -1,14 +1,14 @@
 prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
     body {
         //
-        // If in backend, render the presentation title at a prominent place
+        // Render the slide as a component
         //
         slide = NeosMeetupHH.Presentation:Slide {
             node = ${documentNode}
         }
 
         //
-        // At the frontend side, render all slides
+        // At the frontend side, render all sub slides as well
         //
         subSlides = TYPO3.TypoScript:Collection {
 
