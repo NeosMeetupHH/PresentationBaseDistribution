@@ -1,0 +1,7 @@
+TYPO3:
+  Neos:
+    nodeTypes:
+      groups:
+        presentations:
+          position: 100
+          label: 'Presentations'

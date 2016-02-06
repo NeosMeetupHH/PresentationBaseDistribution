@@ -4,4 +4,7 @@
   constraints:
     nodeTypes:
       '*': FALSE
+      'TYPO3.Neos.NodeTypes:Page': FALSE
+      'TYPO3.Neos:Shortcut': FALSE
+      'NeosMeetupHH.Presentation:HomePage': FALSE
       'NeosMeetupHH.Presentation:PresentationMixin': TRUE

@@ -1,2 +1,6 @@
 'NeosMeetupHH.Presentation:PresentationMixin':
   abstract: TRUE
+
+  ui:
+    group: 'presentations'
+    icon:  icon-laptop

@@ -1,4 +1,7 @@
 'NeosMeetupHH.Presentation:Presentation':
+  ui:
+    label: 'Blank Presentation'
+
   superTypes:
     'TYPO3.Neos:Document': TRUE
     'NeosMeetupHH.Presentation:PresentationMixin': TRUE
