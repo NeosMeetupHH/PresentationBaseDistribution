@@ -1,4 +1,17 @@
 prototype(NeosMeetupHH.Presentation:PresentationDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
+    head.javascripts.site {
+        reveal = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/js/reveal.js'
+        reveal.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+    }
+
+    head.stylesheets.site {
+        reveal = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/reveal.css'
+        reveal.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+
+        revealTheme = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/theme/black.css'
+        revealTheme.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+    }
+
     body {
         //
         // If in backend, render the presentation title at a prominent place
@@ -16,8 +29,31 @@ prototype(NeosMeetupHH.Presentation:PresentationDocument) < prototype(NeosMeetup
         // At the frontend side, render all slides
         //
         slides = TYPO3.TypoScript:Collection {
+            collection = ${q(documentNode).find('[instanceof NeosMeetupHH.Presentation:TopLevelSlideMixin]').get()}
+            itemName = 'node'
+            itemRenderer = NeosMeetupHH.Presentation:Slide
 
             @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
         }
+
+        @process.revealJsWrapper = TYPO3.TypoScript:Tag {
+            tagName = 'div'
+            attributes.class = 'reveal'
+
+            content = TYPO3.TypoScript:Tag {
+                tagName = 'div'
+                attributes.class = 'slides'
+
+                content = ${value}
+            }
+
+            @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+        }
+    }
+
+    revealJsInitialization = TYPO3.TypoScript:Tag {
+        @position = 'after body'
+        tagName = 'script'
+        content = 'Reveal.initialize({ fragments: true });'
     }
 }

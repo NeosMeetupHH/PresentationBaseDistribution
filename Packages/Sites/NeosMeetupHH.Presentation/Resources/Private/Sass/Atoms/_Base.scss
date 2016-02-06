@@ -1,6 +1,10 @@
 /**
  * Base and high-level wrapper elements
  */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
 
 body {
   // Remove default margin.
@@ -10,6 +14,8 @@ body {
   text-align: $start;
   color: $base-text-color;
   background: $body-background;
+  width: 100%;
+  height: 100%;
 }
 
 .siteWrapper {

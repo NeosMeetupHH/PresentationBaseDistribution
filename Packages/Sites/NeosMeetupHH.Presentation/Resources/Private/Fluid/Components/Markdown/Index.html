@@ -1,5 +1,5 @@
 {namespace presentation=NeosMeetupHH\Presentation\ViewHelpers}
 
 <div class="markdown--{theme}">
-    {markdown -> presentation:markdown()}
+    {markdown -> f:format.raw() -> presentation:markdown()}
 </div>

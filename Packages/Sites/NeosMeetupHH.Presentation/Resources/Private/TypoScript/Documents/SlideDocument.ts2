@@ -19,6 +19,10 @@ prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Pres
         }
     }
 
+    head.stylesheets.site {
+        revealTheme = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/theme/black.css'
+    }
+
     body {
         //
         // Render the slide as a component
@@ -33,6 +37,20 @@ prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Pres
         subSlides = TYPO3.TypoScript:Collection {
 
             @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+        }
+
+        @process.revealJsWrapper = TYPO3.TypoScript:Tag {
+            tagName = 'div'
+            attributes.class = 'reveal'
+
+            content = TYPO3.TypoScript:Tag {
+                tagName = 'div'
+                attributes.class = 'slides'
+
+                content = ${value}
+            }
+
+            @if.onlyRenderIfInBackend = ${documentNode.context.inBackend}
         }
     }
 }

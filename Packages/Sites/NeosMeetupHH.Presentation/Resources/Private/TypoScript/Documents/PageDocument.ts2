@@ -5,7 +5,7 @@ prototype(NeosMeetupHH.Presentation:PageDocument) < prototype(NeosMeetupHH.Prese
         }
 
         javascripts.site = TYPO3.TypoScript:RawArray {
-            main = 'resource://NeosMeetupHH.Presentation/Public/JavaScript/App.js'
+            #main = 'resource://NeosMeetupHH.Presentation/Public/JavaScript/App.js'
         }
     }
 }
