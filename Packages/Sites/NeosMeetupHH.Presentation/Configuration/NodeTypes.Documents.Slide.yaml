@@ -6,6 +6,7 @@
   superTypes:
     'NeosMeetupHH.Presentation:Document': TRUE
     'NeosMeetupHH.Presentation:SlideMixin': TRUE
+    'NeosMeetupHH.Presentation:SlideWithContentMixin': TRUE
 
 'NeosMeetupHH.Presentation:Slide':
 

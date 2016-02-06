@@ -1,3 +1,6 @@
 prototype(NeosMeetupHH.Presentation:Slide) < prototype(TYPO3.TypoScript:Template) {
     templatePath = 'resource://NeosMeetupHH.Presentation/Private/Fluid/Components/Slide/Index.html'
+    content = TYPO3.Neos:ContentCollection {
+      nodePath = 'content'
+    }
 }

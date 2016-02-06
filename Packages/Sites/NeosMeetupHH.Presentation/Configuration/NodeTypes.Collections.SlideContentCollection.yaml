@@ -1,0 +1,8 @@
+'NeosMeetupHH.Presentation:SlideContentCollection':
+  superTypes:
+    'TYPO3.Neos:ContentCollection': TRUE
+
+  constraints:
+    nodeTypes:
+      '*': FALSE
+      'NeosMeetupHH.Presentation:SlideContentMixin': TRUE

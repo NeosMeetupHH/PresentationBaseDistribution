@@ -1,0 +1,7 @@
+'NeosMeetupHH.Presentation:SlideWithContentMixin':
+  abstract: TRUE
+
+  childNodes:
+
+    content:
+      type: 'NeosMeetupHH.Presentation:SlideContentCollection'
