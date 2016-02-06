@@ -1,0 +1,108 @@
+'NeosMeetupHH.Presentation:Headline':
+  ui:
+    label: 'Headline'
+    icon: icon-font
+    inspector:
+      groups:
+        headline:
+          label: 'Headline Settings'
+          position: -10
+
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+    'NeosMeetupHH.Presentation:SlideContentMixin': TRUE
+
+  properties:
+
+    headline__title:
+      type: string
+      ui:
+        inlineEditable: TRUE
+        aloha:
+          'placeholder': 'Enter Headline here...'
+          'format':
+            'b': FALSE
+            'i': FALSE
+            'u': FALSE
+            'sub': FALSE
+            'sup': FALSE
+            'p': FALSE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'h4': FALSE
+            'h5': FALSE
+            'h6': FALSE
+            'pre': FALSE
+            'removeFormat': true
+          'table':
+            'table': FALSE
+          'list':
+            'ol': FALSE
+            'ul': FALSE
+          'link':
+            'a': FALSE
+          'alignment':
+            'left': FALSE
+            'center': FALSE
+            'right': FALSE
+
+    headline__type:
+      defaultValue: 'h1'
+      ui:
+        label: 'Type'
+        position: 0
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: headline
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              h1:
+                label: 'H1'
+              h2:
+                label: 'H2'
+              h3:
+                label: 'H3'
+              h4:
+                label: 'H4'
+              h5:
+                label: 'H5'
+              h6:
+                label: 'H6'
+
+    headline__alignment__horizontal:
+      defaultValue: 'left'
+      ui:
+        label: 'Horizontal Alignment'
+        position: 100
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: headline
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              left:
+                label: 'Left'
+              center:
+                label: 'Center'
+              right:
+                label: 'Right'
+
+    headline__alignment__vertical:
+      defaultValue: 'top'
+      ui:
+        label: 'Vertical Alignment'
+        position: 200
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: headline
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              top:
+                label: 'Top'
+              center:
+                label: 'Center'
+              bottom:
+                label: 'Bottom'

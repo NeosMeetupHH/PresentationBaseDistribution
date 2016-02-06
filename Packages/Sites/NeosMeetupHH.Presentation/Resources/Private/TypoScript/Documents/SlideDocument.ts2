@@ -1,7 +1,7 @@
 prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
     @context {
         presentation = ${q(documentNode).closest('[instanceof NeosMeetupHH.Presentation:PresentationMixin]').get(0)}
-        theme = ${q(presentation).property('presentation__theme')}
+        theme = ${q(q(documentNode).closest('[instanceof NeosMeetupHH.Presentation:PresentationMixin]').get(0)).property('presentation__theme')}
     }
     //
     // Redirect to closest presentation, when hit directly

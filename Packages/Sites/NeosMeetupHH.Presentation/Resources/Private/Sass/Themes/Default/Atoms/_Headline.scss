@@ -1,0 +1,26 @@
+.headline--default {
+
+}
+
+.headline--center--default {
+    position: absolute;
+}
+
+.headline--center--h--default {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    &.headline--center--v--default {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.headline--center--v--default {
+  top: 50%;
+  transform: translateY(-50%);
+
+    &.headline--center--h--default {
+        transform: translate(-50%, -50%);
+    }
+}
