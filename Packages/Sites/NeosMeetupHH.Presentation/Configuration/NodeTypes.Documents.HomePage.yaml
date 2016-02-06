@@ -1,0 +1,3 @@
+'NeosMeetupHH.Presentation:HomePage':
+  superTypes:
+    'TYPO3.Neos:Document': TRUE

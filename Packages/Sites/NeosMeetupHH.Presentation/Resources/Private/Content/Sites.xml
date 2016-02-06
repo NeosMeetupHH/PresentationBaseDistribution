@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <site name="Neos Meetup HH Presentations" state="1" siteResourcesPackageKey="NeosMeetupHH.Presentation" siteNodeName="presentation">
+  <nodes formatVersion="2.0">
+   <node nodeName="presentation">
+    <variant workspace="live" nodeType="NeosMeetupHH.Presentation:HomePage" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+     <dimensions>
+
+     </dimensions>
+     <accessRoles __type="array"/>
+     <properties>
+      <title __type="string">Home</title>
+      <uriPathSegment __type="string">home</uriPathSegment>
+     </properties>
+    </variant>
+   </node>
+  </nodes>
+ </site>
+</root>
