@@ -1,0 +1,18 @@
+prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Presentation:PageDocument) {
+    body {
+        //
+        // If in backend, render the presentation title at a prominent place
+        //
+        slide = NeosMeetupHH.Presentation:Slide {
+            node = ${documentNode}
+        }
+
+        //
+        // At the frontend side, render all slides
+        //
+        subSlides = TYPO3.TypoScript:Collection {
+
+            @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+        }
+    }
+}

@@ -1,4 +1,5 @@
 include: Documents/*.ts2
+include: Components/*.ts2
 
 page = TYPO3.TypoScript:Case {
     default {
