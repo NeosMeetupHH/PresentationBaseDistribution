@@ -1,0 +1,5 @@
+'NeosMeetupHH.Presentation:Document':
+  abstract: true
+
+  superTypes:
+    'TYPO3.Neos:Document': TRUE

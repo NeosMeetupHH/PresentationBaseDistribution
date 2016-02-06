@@ -3,5 +3,5 @@
     label: 'Blank Presentation'
 
   superTypes:
-    'TYPO3.Neos:Document': TRUE
+    'NeosMeetupHH.Presentation:Document': TRUE
     'NeosMeetupHH.Presentation:PresentationMixin': TRUE

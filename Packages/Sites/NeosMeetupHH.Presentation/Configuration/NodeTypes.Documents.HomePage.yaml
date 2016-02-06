@@ -1,10 +1,11 @@
 'NeosMeetupHH.Presentation:HomePage':
   superTypes:
-    'TYPO3.Neos:Document': TRUE
+    'NeosMeetupHH.Presentation:Document': TRUE
   constraints:
     nodeTypes:
       '*': FALSE
-      'TYPO3.Neos.NodeTypes:Page': FALSE
-      'TYPO3.Neos:Shortcut': FALSE
+      'TYPO3.Neos:Document': FALSE
+      'NeosMeetupHH.Presentation:Document': TRUE
       'NeosMeetupHH.Presentation:HomePage': FALSE
+      'NeosMeetupHH.Presentation:SlideMixin': FALSE
       'NeosMeetupHH.Presentation:PresentationMixin': TRUE

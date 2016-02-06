@@ -4,7 +4,7 @@
     label: 'Blank Slide'
 
   superTypes:
-    'TYPO3.Neos:Document': TRUE
+    'NeosMeetupHH.Presentation:Document': TRUE
     'NeosMeetupHH.Presentation:SlideMixin': TRUE
 
 'NeosMeetupHH.Presentation:Slide':
