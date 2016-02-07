@@ -8,7 +8,7 @@ prototype(NeosMeetupHH.Presentation:PresentationDocument) < prototype(NeosMeetup
         reveal = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/reveal.css'
         reveal.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
 
-        revealTheme = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/theme/black.css'
+        revealTheme = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/theme/league.css'
         revealTheme.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
     }
 

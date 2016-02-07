@@ -4,3 +4,25 @@
   ui:
     group: code
     icon:  icon-keyboard
+    inspector:
+      groups:
+        code:
+          label: 'Code Settings'
+          position: -10
+
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+    'NeosMeetupHH.Presentation:SlideContentMixin': TRUE
+
+  properties:
+
+    code__code:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Code'
+        position: 0
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: code
+          editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'

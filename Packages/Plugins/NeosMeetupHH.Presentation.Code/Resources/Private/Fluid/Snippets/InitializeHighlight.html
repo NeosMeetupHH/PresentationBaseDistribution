@@ -1,0 +1,12 @@
+<script>
+    function initializeHighlight () {
+        [].slice.call(document.querySelectorAll('pre code')).forEach(
+            function initializeHighlightBlock (block) {
+                hljs.highlightBlock(block);
+            }
+        );
+    }
+
+    document.addEventListener('Neos.PageLoaded', initializeHighlight);
+    initializeHighlight();
+</script>

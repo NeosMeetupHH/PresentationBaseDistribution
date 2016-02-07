@@ -21,11 +21,11 @@
       type: string
       defaultValue: ''
       ui:
-        label: 'Type'
+        label: 'Content'
         position: 0
         reloadPageIfChanged: TRUE
         inspector:
           group: markdown
           editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
           editorOptions:
-            highlightingMode: 'markdown'
+            highlightingMode: 'text/x-markdown'

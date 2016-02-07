@@ -1,0 +1,33 @@
+include: Components/*.ts2
+
+prototype(NeosMeetupHH.Presentation:PresentationDocument) {
+    head.javascripts.site {
+        highlight = 'resource://NeosMeetupHH.Presentation.Code/Public/Plugins/highlight/highlight.pack.js'
+        highlight.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+    }
+
+    head.stylesheets.site {
+        highlightTheme = 'resource://NeosMeetupHH.Presentation.Code/Public/Plugins/highlight/styles/dark.css'
+        highlightTheme.@if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
+    }
+
+    initializeHighlight = TYPO3.TypoScript:Template {
+        @position = 'after body'
+        templatePath = 'resource://NeosMeetupHH.Presentation.Code/Private/Fluid/Snippets/InitializeHighlight.html'
+    }
+}
+
+prototype(NeosMeetupHH.Presentation:SlideDocument) {
+    head.javascripts.site {
+        highlight = 'resource://NeosMeetupHH.Presentation.Code/Public/Plugins/highlight/highlight.pack.js'
+    }
+
+    head.stylesheets.site {
+        highlightTheme = 'resource://NeosMeetupHH.Presentation.Code/Public/Plugins/highlight/styles/dark.css'
+    }
+
+    initializeHighlight = TYPO3.TypoScript:Template {
+        @position = 'after body'
+        templatePath = 'resource://NeosMeetupHH.Presentation.Code/Private/Fluid/Snippets/InitializeHighlight.html'
+    }
+}

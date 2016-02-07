@@ -1,0 +1,15 @@
+prototype(NeosMeetupHH.Presentation.Code:Code) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://NeosMeetupHH.Presentation.Code/Private/Fluid/Components/Code/Index.html'
+    code = ${q(node).property('code__code')}
+}
+
+prototype(NeosMeetupHH.Presentation.Code:PHPCode) < prototype(NeosMeetupHH.Presentation.Code:Code) {
+    mode = 'application/x-httpd-php'
+}
+
+prototype(TYPO3.Neos:ContentCase) {
+    isCode {
+        condition = ${q(node).is('[instanceof NeosMeetupHH.Presentation.Code:CodeMixin]')}
+        type = ${q(node).property('_nodeType.name') + 'Code'}
+    }
+}

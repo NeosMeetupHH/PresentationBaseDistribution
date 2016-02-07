@@ -1,5 +1,8 @@
 TYPO3:
   Neos:
+    typoScript:
+      autoInclude:
+        'NeosMeetupHH.Presentation.Code': TRUE
     nodeTypes:
       groups:
         code:

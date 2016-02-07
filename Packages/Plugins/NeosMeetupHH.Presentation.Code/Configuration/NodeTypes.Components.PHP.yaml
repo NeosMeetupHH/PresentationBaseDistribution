@@ -1,0 +1,14 @@
+'NeosMeetupHH.Presentation.Code:PHP':
+  ui:
+    label: 'PHP'
+
+  superTypes:
+    'NeosMeetupHH.Presentation.Code:CodeMixin': TRUE
+
+  properties:
+
+    code__code:
+      ui:
+        inspector:
+          editorOptions:
+            highlightingMode: 'application/x-httpd-php'
