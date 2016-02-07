@@ -1,0 +1,7 @@
+TYPO3:
+  Neos:
+    nodeTypes:
+      groups:
+        code:
+          position: 100
+          label: 'Code'

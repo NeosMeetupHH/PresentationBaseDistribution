@@ -1,0 +1,6 @@
+'NeosMeetupHH.Presentation.Code:CodeMixin':
+  abstract: TRUE
+
+  ui:
+    group: code
+    icon:  icon-keyboard
