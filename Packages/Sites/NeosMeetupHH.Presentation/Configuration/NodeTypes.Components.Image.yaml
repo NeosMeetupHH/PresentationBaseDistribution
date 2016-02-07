@@ -1,0 +1,8 @@
+'NeosMeetupHH.Presentation:Image':
+  ui:
+    label: 'Image'
+    icon: icon-picture
+
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Image': TRUE
+    'NeosMeetupHH.Presentation:SlideContentMixin': TRUE

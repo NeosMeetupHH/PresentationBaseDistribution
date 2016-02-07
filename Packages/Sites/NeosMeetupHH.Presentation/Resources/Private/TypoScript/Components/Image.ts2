@@ -1,0 +1,6 @@
+prototype(NeosMeetupHH.Presentation:Image) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://NeosMeetupHH.Presentation/Private/Fluid/Components/Image/Index.html'
+    imageUri = TYPO3.Neos:ImageUri {
+        asset = ${q(node).property('image')}
+    }
+}
