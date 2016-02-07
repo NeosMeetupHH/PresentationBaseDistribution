@@ -19,7 +19,12 @@ prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Pres
         }
     }
 
+    head.javascripts.site {
+        reveal = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/js/reveal.js'
+    }
+
     head.stylesheets.site {
+        revealBackendHelper = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal-backend/helper.css'
         revealTheme = 'resource://NeosMeetupHH.Presentation/Public/Plugins/reveal/css/theme/black.css'
     }
 

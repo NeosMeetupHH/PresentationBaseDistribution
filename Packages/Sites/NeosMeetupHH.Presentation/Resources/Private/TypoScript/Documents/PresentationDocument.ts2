@@ -31,7 +31,13 @@ prototype(NeosMeetupHH.Presentation:PresentationDocument) < prototype(NeosMeetup
         slides = TYPO3.TypoScript:Collection {
             collection = ${q(documentNode).find('[instanceof NeosMeetupHH.Presentation:TopLevelSlideMixin]').get()}
             itemName = 'node'
-            itemRenderer = NeosMeetupHH.Presentation:Slide
+            itemRenderer = NeosMeetupHH.Presentation:Slide {
+                subSlides = TYPO3.TypoScript:Collection {
+                    collection = ${q(node).find('[instanceof NeosMeetupHH.Presentation:SlideMixin]').get()}
+                    itemName = 'node'
+                    itemRenderer = NeosMeetupHH.Presentation:Slide
+                }
+            }
 
             @if.onlyRenderIfNotInBackend = ${!documentNode.context.inBackend}
         }

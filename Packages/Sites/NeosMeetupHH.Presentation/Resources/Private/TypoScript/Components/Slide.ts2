@@ -2,5 +2,12 @@ prototype(NeosMeetupHH.Presentation:Slide) < prototype(TYPO3.TypoScript:Template
     templatePath = 'resource://NeosMeetupHH.Presentation/Private/Fluid/Components/Slide/Index.html'
     content = TYPO3.Neos:ContentCollection {
       nodePath = 'content'
-    } 
+    }
+
+    @process.wrapInSection = TYPO3.TypoScript:Tag {
+        tagName = 'section'
+        content = ${value}
+
+        @if.onlyRenderWhenSubslidesArePresent = ${q(node).find('[instanceof NeosMeetupHH.Presentation:SlideMixin]').count() > 0}
+    }
 }

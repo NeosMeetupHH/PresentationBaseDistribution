@@ -18,6 +18,12 @@ body {
   height: 100%;
 }
 
+body.neos-inspector-panel-open,
+body.neos-navigate-panel-open {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+
 .siteWrapper {
   position: relative;
   width: $layout-width;
