@@ -54,3 +54,5 @@ prototype(NeosMeetupHH.Presentation:SlideDocument) < prototype(NeosMeetupHH.Pres
         }
     }
 }
+
+prototype(NeosMeetupHH.Presentation:SubSlideDocument) < prototype(NeosMeetupHH.Presentation:SlideDocument)
